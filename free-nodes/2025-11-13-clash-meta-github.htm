@@ -232,6 +232,36 @@ A4: 受政策和市场因素影响，重新上架存在不确定性。用户应�
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
+    <div class="panel-heading"><h5>WinXray 的多出口节点如何优化访问速度？</h5></div>
+    <div class="panel-body">
+        通过为不同流量类型设置不同出口节点，WinXray 可以自动选择延迟最低的节点处理请求。结合策略组，可提高网页访问、视频播放和游戏等应用的速度与稳定性。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Matsuri 是否支持延迟排序节点？</h5></div>
+    <div class="panel-body">
+        支持。Matsuri 会自动测试节点延迟并按结果排序。用户可快速选择延迟最低或速度最快的节点，提高网络访问速度，尤其适合游戏或视频场景。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>PassWall2 是什么软件？</h5></div>
+    <div class="panel-body">
+        PassWall2 是一个运行在 OpenWRT 路由器上的插件，用于代理流量分流和节点管理。它支持多种协议，包括 V2Ray、Trojan、SSR 等。通过 Web 界面，用户可以灵活设置不同设备走不同代理，适合家庭或小型局域网使用。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>PassWall2 在路由器中如何更新节点订阅？</h5></div>
+    <div class="panel-body">
+        在 PassWall2 面板中点击“订阅管理”，输入或更新订阅链接后，点击“手动更新”即可自动下载最新节点数据。也可设置定时任务每日自动更新，保持配置最新。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>QuantumultX 的广告屏蔽原理是什么？</h5></div>
+    <div class="panel-body">
+        QuantumultX 使用分流规则与脚本结合的方式实现广告屏蔽。通过重写 HTTP 请求和阻止特定域名，它能有效去除 App 内广告或网页弹窗，提升浏览体验。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>如何给 Clash 添加自定义域名白名单以提升访问体验？</h5></div>
+    <div class="panel-body">
+        在 rules 中添加 `DOMAIN-SUFFIX,example.com,DIRECT` 或 `DOMAIN-KEYWORD,example,DIRECT` 条目，将常用且可靠的站点设为直连，可减少代理绕行延迟并避免因代理造成的登录/验证问题。<hr />    </div>
+</div>
+<div class="panel panel-default">
     <div class="panel-heading"><h5>PassWall2 如何根据延迟自动切换节点？</h5></div>
     <div class="panel-body">
         PassWall2 会定期测试节点延迟，并结合策略组自动切换到延迟最低的节点。无需用户手动操作，即可保证网页、视频和游戏流量的高速稳定访问，提高整体网络体验。<hr />    </div>
@@ -242,11 +272,6 @@ A4: 受政策和市场因素影响，重新上架存在不确定性。用户应�
         支持。Nekobox 可以独立管理 Shadowsocks、Clash 等客户端节点，互不干扰。结合策略组，可实现多客户端流量分流和网络优化，提高节点管理效率和使用便利性。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>PassWall2 是什么软件？</h5></div>
-    <div class="panel-body">
-        PassWall2 是一个运行在 OpenWRT 路由器上的插件，用于代理流量分流和节点管理。它支持多种协议，包括 V2Ray、Trojan、SSR 等。通过 Web 界面，用户可以灵活设置不同设备走不同代理，适合家庭或小型局域网使用。<hr />    </div>
-</div>
-<div class="panel panel-default">
     <div class="panel-heading"><h5>Hiddify Next 用户带宽限制如何配置？</h5></div>
     <div class="panel-body">
         管理员可设置每个用户上传、下载和总流量上限，超出限制可自动降速或阻止访问。保证服务器资源合理分配，避免单用户占用过多带宽，提高整体网络公平性。<hr />    </div>
@@ -254,32 +279,7 @@ A4: 受政策和市场因素影响，重新上架存在不确定性。用户应�
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Clash 支持哪些协议？</h5></div>
     <div class="panel-body">
-        Clash 支持多种主流代理协议，包括 VMess、VLess、Trojan、Shadowsocks、Snell、Socks5 等。通过配置文件或订阅源，用户可以灵活组合不同协议的节点，实现复杂的分流策略与优先级控制。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>QuantumultX 的广告屏蔽原理是什么？</h5></div>
-    <div class="panel-body">
-        QuantumultX 使用分流规则与脚本结合的方式实现广告屏蔽。通过重写 HTTP 请求和阻止特定域名，它能有效去除 App 内广告或网页弹窗，提升浏览体验。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Matsuri 是否支持延迟排序节点？</h5></div>
-    <div class="panel-body">
-        支持。Matsuri 会自动测试节点延迟并按结果排序。用户可快速选择延迟最低或速度最快的节点，提高网络访问速度，尤其适合游戏或视频场景。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>PassWall2 在路由器中如何更新节点订阅？</h5></div>
-    <div class="panel-body">
-        在 PassWall2 面板中点击“订阅管理”，输入或更新订阅链接后，点击“手动更新”即可自动下载最新节点数据。也可设置定时任务每日自动更新，保持配置最新。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>如何给 Clash 添加自定义域名白名单以提升访问体验？</h5></div>
-    <div class="panel-body">
-        在 rules 中添加 `DOMAIN-SUFFIX,example.com,DIRECT` 或 `DOMAIN-KEYWORD,example,DIRECT` 条目，将常用且可靠的站点设为直连，可减少代理绕行延迟并避免因代理造成的登录/验证问题。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>WinXray 的多出口节点如何优化访问速度？</h5></div>
-    <div class="panel-body">
-        通过为不同流量类型设置不同出口节点，WinXray 可以自动选择延迟最低的节点处理请求。结合策略组，可提高网页访问、视频播放和游戏等应用的速度与稳定性。    </div>
+        Clash 支持多种主流代理协议，包括 VMess、VLess、Trojan、Shadowsocks、Snell、Socks5 等。通过配置文件或订阅源，用户可以灵活组合不同协议的节点，实现复杂的分流策略与优先级控制。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -308,16 +308,16 @@ A4: 受政策和市场因素影响，重新上架存在不确定性。用户应�
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2025-10-14-clash-node-daily-updates.htm" title="免费节点机场 - 10月14日18.7M/S|免费V2ray节点/Shadowrocket节点/Clash节点/SSR节点/Singbox节点节点推荐，VPN节点购买推荐">免费节点机场 - 10月14日18.7M/S|免费V2ray节点/Shadowrocket节点/Clash节点/SSR节点/Singbox节点节点推荐，VPN节点购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-1-clash-verge-rev-windows.htm" title="免费节点机场 - 11月1日18.2M/S|免费SSR节点/V2ray节点/Singbox节点/Shadowrocket节点/Clash节点节点推荐，VPN节点购买推荐">免费节点机场 - 11月1日18.2M/S|免费SSR节点/V2ray节点/Singbox节点/Shadowrocket节点/Clash节点节点推荐，VPN节点购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-10-31-clash-node-daily-updates.htm" title="免费节点机场 - 10月31日21.2M/S|免费V2ray节点/Shadowrocket节点/SSR节点/Singbox节点/Clash节点节点推荐，VPN节点购买推荐">免费节点机场 - 10月31日21.2M/S|免费V2ray节点/Shadowrocket节点/SSR节点/Singbox节点/Clash节点节点推荐，VPN节点购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-10-24-clash-verge-rev-github.htm" title="免费节点机场 - 10月24日22.3M/S|免费Singbox节点/V2ray节点/Clash节点/Shadowrocket节点/SSR节点节点推荐，VPN节点购买推荐">免费节点机场 - 10月24日22.3M/S|免费Singbox节点/V2ray节点/Clash节点/Shadowrocket节点/SSR节点节点推荐，VPN节点购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-10-8-clash-verge-rev-node-share.htm" title="免费节点机场 - 10月8日21.2M/S|免费Singbox节点/V2ray节点/Clash节点/SSR节点/Shadowrocket节点节点推荐，VPN节点购买推荐">免费节点机场 - 10月8日21.2M/S|免费Singbox节点/V2ray节点/Clash节点/SSR节点/Shadowrocket节点节点推荐，VPN节点购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-10-4-clash-stash.htm" title="免费节点机场 - 10月4日21.2M/S|免费Singbox节点/Shadowrocket节点/Clash节点/V2ray节点/SSR节点节点推荐，VPN节点购买推荐">免费节点机场 - 10月4日21.2M/S|免费Singbox节点/Shadowrocket节点/Clash节点/V2ray节点/SSR节点节点推荐，VPN节点购买推荐</a></li>
                         <li class="py-2"><a href="/free-nodes/2025-11-7-free-node-subscribe.htm" title="免费节点机场 - 11月7日22.2M/S|免费V2ray节点/Shadowrocket节点/Clash节点/Singbox节点/SSR节点节点推荐，VPN节点购买推荐">免费节点机场 - 11月7日22.2M/S|免费V2ray节点/Shadowrocket节点/Clash节点/Singbox节点/SSR节点节点推荐，VPN节点购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-14-node-share.htm" title="免费节点机场 - 11月14日22M/S|免费Singbox节点/V2ray节点/Shadowrocket节点/SSR节点/Clash节点节点推荐，VPN节点购买推荐">免费节点机场 - 11月14日22M/S|免费Singbox节点/V2ray节点/Shadowrocket节点/SSR节点/Clash节点节点推荐，VPN节点购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-13-clash-meta-github.htm" title="免费节点机场 - 11月13日20.2M/S|免费Singbox节点/Shadowrocket节点/SSR节点/V2ray节点/Clash节点节点推荐，VPN节点购买推荐">免费节点机场 - 11月13日20.2M/S|免费Singbox节点/Shadowrocket节点/SSR节点/V2ray节点/Clash节点节点推荐，VPN节点购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-13-node-share.htm" title="免费节点机场 - 10月13日18.1M/S|免费Shadowrocket节点/V2ray节点/Clash节点/SSR节点/Singbox节点节点推荐，VPN节点购买推荐">免费节点机场 - 10月13日18.1M/S|免费Shadowrocket节点/V2ray节点/Clash节点/SSR节点/Singbox节点节点推荐，VPN节点购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-6-free-node-subscribe.htm" title="免费节点机场 - 11月6日18M/S|免费SSR节点/Shadowrocket节点/Singbox节点/V2ray节点/Clash节点节点推荐，VPN节点购买推荐">免费节点机场 - 11月6日18M/S|免费SSR节点/Shadowrocket节点/Singbox节点/V2ray节点/Clash节点节点推荐，VPN节点购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-17-clash-stash.htm" title="免费节点机场 - 10月17日19.2M/S|免费Shadowrocket节点/V2ray节点/Singbox节点/SSR节点/Clash节点节点推荐，VPN节点购买推荐">免费节点机场 - 10月17日19.2M/S|免费Shadowrocket节点/V2ray节点/Singbox节点/SSR节点/Clash节点节点推荐，VPN节点购买推荐</a></li>
                         <li class="py-2"><a href="/free-nodes/2025-11-2-clash-verge-rev-node-github.htm" title="免费节点机场 - 11月2日22.7M/S|免费SSR节点/V2ray节点/Shadowrocket节点/Clash节点/Singbox节点节点推荐，VPN节点购买推荐">免费节点机场 - 11月2日22.7M/S|免费SSR节点/V2ray节点/Shadowrocket节点/Clash节点/Singbox节点节点推荐，VPN节点购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-9-clash-node.htm" title="免费节点机场 - 10月9日18.7M/S|免费Singbox节点/SSR节点/V2ray节点/Shadowrocket节点/Clash节点节点推荐，VPN节点购买推荐">免费节点机场 - 10月9日18.7M/S|免费Singbox节点/SSR节点/V2ray节点/Shadowrocket节点/Clash节点节点推荐，VPN节点购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-21-node-share.htm" title="免费节点机场 - 10月21日21.9M/S|免费V2ray节点/Clash节点/Singbox节点/SSR节点/Shadowrocket节点节点推荐，VPN节点购买推荐">免费节点机场 - 10月21日21.9M/S|免费V2ray节点/Clash节点/Singbox节点/SSR节点/Shadowrocket节点节点推荐，VPN节点购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-10-12-clash-verge-rev-node-share.htm" title="免费节点机场 - 10月12日18.2M/S|免费V2ray节点/SSR节点/Singbox节点/Shadowrocket节点/Clash节点节点推荐，VPN节点购买推荐">免费节点机场 - 10月12日18.2M/S|免费V2ray节点/SSR节点/Singbox节点/Shadowrocket节点/Clash节点节点推荐，VPN节点购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-18-clash-stash.htm" title="免费节点机场 - 11月18日22.5M/S|免费Clash节点/Singbox节点/Shadowrocket节点/V2ray节点/SSR节点节点推荐，VPN节点购买推荐">免费节点机场 - 11月18日22.5M/S|免费Clash节点/Singbox节点/Shadowrocket节点/V2ray节点/SSR节点节点推荐，VPN节点购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-10-14-clash-node-daily-updates.htm" title="免费节点机场 - 10月14日18.7M/S|免费V2ray节点/Shadowrocket节点/Clash节点/SSR节点/Singbox节点节点推荐，VPN节点购买推荐">免费节点机场 - 10月14日18.7M/S|免费V2ray节点/Shadowrocket节点/Clash节点/SSR节点/Singbox节点节点推荐，VPN节点购买推荐</a></li>
                     </ul>
     </div>
 </div>
@@ -329,7 +329,7 @@ A4: 受政策和市场因素影响，重新上架存在不确定性。用户应�
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">14</span> <a href="/date/2025-11/" title="2025-11 归档">2025-11</a></h4>
+                <h4><span class="badge" style="float: right;">21</span> <a href="/date/2025-11/" title="2025-11 归档">2025-11</a></h4>
             </li>
                         <li class="py-2">
                 <h4><span class="badge" style="float: right;">26</span> <a href="/date/2025-10/" title="2025-10 归档">2025-10</a></h4>
