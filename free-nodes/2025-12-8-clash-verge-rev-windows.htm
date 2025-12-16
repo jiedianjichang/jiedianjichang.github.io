@@ -379,27 +379,13 @@ sudo apt install shadowsocks-libev
 <div class="clearfix"></div>
 <div class="col-md-12 mt-5">
         <p>上一个：<a href="/free-nodes/2025-12-7-clash-v2ray-ss-ssr.htm">免费节点机场 - 12月7日21.2M/S|免费Singbox节点/V2ray节点/SSR节点/Clash节点/Shadowrocket节点节点推荐，VPN节点购买推荐</a></p>
+        <p>下一个：<a href="/free-nodes/2025-12-9-clash-verge-rev-github.htm">免费节点机场 - 12月9日18.1M/S|免费Singbox节点/Shadowrocket节点/SSR节点/V2ray节点/Clash节点节点推荐，VPN节点购买推荐</a></p>
     </div>
 <h4>FAQ</h4>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>VMess AEAD 加密在封锁网络中有什么优势？</h5></div>
-    <div class="panel-body">
-        AEAD 加密可以防止数据被篡改和流量特征泄露，降低被检测风险。在封锁较高的网络环境中，保证节点长期可用，提高数据传输安全性和访问可靠性，增强用户体验。<hr />    </div>
-</div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Matsuri 可以用于 Android 吗？</h5></div>
     <div class="panel-body">
         Matsuri 主要针对桌面平台开发，目前并未推出 Android 版本。但可使用其配置文件在兼容的客户端（如 Nekobox 或 Clash Android）中加载以获得类似体验。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Trojan 节点无法连接时应如何排查？</h5></div>
-    <div class="panel-body">
-        遇到 Trojan 无法连接时，需检查服务器证书是否有效、端口是否开放、密码配置是否匹配。还应确认防火墙未阻断相关端口，并尝试切换 TLS 版本或使用 IP 地址连接。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Mihomo 是什么？</h5></div>
-    <div class="panel-body">
-        Mihomo 是 Clash Premium 的开源替代项目，兼容原版 Clash 配置文件并扩展了部分新功能。它性能优异、内存占用低，适用于希望自定义构建代理环境的高级用户。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>V2Ray 服务器启动后提示端口被占用，该如何处理？</h5></div>
@@ -407,9 +393,29 @@ sudo apt install shadowsocks-libev
         先用 netstat 或 ss 工具查看占用该端口的进程（例如 `ss -ltnp`），确认是旧进程或其他服务占用。停止占用进程或修改 V2Ray 配置端口，然后重启服务并检查防火墙规则是否开放了新端口。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Trojan 的伪装域名有什么要求？</h5></div>
+    <div class="panel-heading"><h5>VMess AEAD 加密在封锁网络中有什么优势？</h5></div>
     <div class="panel-body">
-        Trojan 的伪装域名必须是可以通过 HTTPS 正常访问的真实网站，并且 SSL 证书有效。伪装域名用于与服务器证书匹配，使得流量在外观上完全与正常 HTTPS 请求一致。<hr />    </div>
+        AEAD 加密可以防止数据被篡改和流量特征泄露，降低被检测风险。在封锁较高的网络环境中，保证节点长期可用，提高数据传输安全性和访问可靠性，增强用户体验。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Mihomo 是什么？</h5></div>
+    <div class="panel-body">
+        Mihomo 是 Clash Premium 的开源替代项目，兼容原版 Clash 配置文件并扩展了部分新功能。它性能优异、内存占用低，适用于希望自定义构建代理环境的高级用户。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Trojan 节点无法连接时应如何排查？</h5></div>
+    <div class="panel-body">
+        遇到 Trojan 无法连接时，需检查服务器证书是否有效、端口是否开放、密码配置是否匹配。还应确认防火墙未阻断相关端口，并尝试切换 TLS 版本或使用 IP 地址连接。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Surfboard 支持哪些类型的节点导入？</h5></div>
+    <div class="panel-body">
+        Surfboard 支持 VMess、VLESS、Trojan、Shadowsocks 等节点类型。用户可通过 YAML 或 JSON 文件导入，配置策略组和规则，实现自动分流和节点管理。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>QuantumultX 的 MITM 功能如何使用？</h5></div>
+    <div class="panel-body">
+        QuantumultX 的 MITM（中间人）功能可拦截 HTTPS 流量，用于修改或分析请求与响应。开启时需安装客户端生成的根证书，确保能正确解析加密数据。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>VLESS 是否比 Trojan 更稳定？</h5></div>
@@ -422,14 +428,9 @@ sudo apt install shadowsocks-libev
         常见错误包括端口号不匹配、UUID 错误、TLS 设置不正确或传输类型配置错误。这些都会导致连接失败。检查服务器配置与客户端参数一致性是解决问题的关键。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Surfboard 支持哪些类型的节点导入？</h5></div>
+    <div class="panel-heading"><h5>Trojan 的伪装域名有什么要求？</h5></div>
     <div class="panel-body">
-        Surfboard 支持 VMess、VLESS、Trojan、Shadowsocks 等节点类型。用户可通过 YAML 或 JSON 文件导入，配置策略组和规则，实现自动分流和节点管理。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>QuantumultX 的 MITM 功能如何使用？</h5></div>
-    <div class="panel-body">
-        QuantumultX 的 MITM（中间人）功能可拦截 HTTPS 流量，用于修改或分析请求与响应。开启时需安装客户端生成的根证书，确保能正确解析加密数据。    </div>
+        Trojan 的伪装域名必须是可以通过 HTTPS 正常访问的真实网站，并且 SSL 证书有效。伪装域名用于与服务器证书匹配，使得流量在外观上完全与正常 HTTPS 请求一致。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -458,16 +459,16 @@ sudo apt install shadowsocks-libev
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2025-11-17-free-node-subscribe.htm" title="免费节点机场 - 11月17日18.5M/S|免费V2ray节点/SSR节点/Clash节点/Singbox节点/Shadowrocket节点节点推荐，VPN节点购买推荐">免费节点机场 - 11月17日18.5M/S|免费V2ray节点/SSR节点/Clash节点/Singbox节点/Shadowrocket节点节点推荐，VPN节点购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-10-clash-node-daily-updates.htm" title="免费节点机场 - 11月10日20.9M/S|免费Shadowrocket节点/SSR节点/Clash节点/Singbox节点/V2ray节点节点推荐，VPN节点购买推荐">免费节点机场 - 11月10日20.9M/S|免费Shadowrocket节点/SSR节点/Clash节点/Singbox节点/V2ray节点节点推荐，VPN节点购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-9-clash-verge-rev-windows.htm" title="免费节点机场 - 11月9日18M/S|免费SSR节点/V2ray节点/Singbox节点/Clash节点/Shadowrocket节点节点推荐，VPN节点购买推荐">免费节点机场 - 11月9日18M/S|免费SSR节点/V2ray节点/Singbox节点/Clash节点/Shadowrocket节点节点推荐，VPN节点购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-12-1-clash-verge-rev-nodes.htm" title="免费节点机场 - 12月1日18.5M/S|免费Singbox节点/SSR节点/Clash节点/Shadowrocket节点/V2ray节点节点推荐，VPN节点购买推荐">免费节点机场 - 12月1日18.5M/S|免费Singbox节点/SSR节点/Clash节点/Shadowrocket节点/V2ray节点节点推荐，VPN节点购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-8-free-node-subscribe.htm" title="免费节点机场 - 11月8日19M/S|免费SSR节点/Shadowrocket节点/V2ray节点/Clash节点/Singbox节点节点推荐，VPN节点购买推荐">免费节点机场 - 11月8日19M/S|免费SSR节点/Shadowrocket节点/V2ray节点/Clash节点/Singbox节点节点推荐，VPN节点购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-12-7-clash-v2ray-ss-ssr.htm" title="免费节点机场 - 12月7日21.2M/S|免费Singbox节点/V2ray节点/SSR节点/Clash节点/Shadowrocket节点节点推荐，VPN节点购买推荐">免费节点机场 - 12月7日21.2M/S|免费Singbox节点/V2ray节点/SSR节点/Clash节点/Shadowrocket节点节点推荐，VPN节点购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-22-free-node-subscribe.htm" title="免费节点机场 - 11月22日19.6M/S|免费Shadowrocket节点/V2ray节点/SSR节点/Singbox节点/Clash节点节点推荐，VPN节点购买推荐">免费节点机场 - 11月22日19.6M/S|免费Shadowrocket节点/V2ray节点/SSR节点/Singbox节点/Clash节点节点推荐，VPN节点购买推荐</a></li>
                         <li class="py-2"><a href="/free-nodes/2025-11-18-clash-stash.htm" title="免费节点机场 - 11月18日22.5M/S|免费Clash节点/Singbox节点/Shadowrocket节点/V2ray节点/SSR节点节点推荐，VPN节点购买推荐">免费节点机场 - 11月18日22.5M/S|免费Clash节点/Singbox节点/Shadowrocket节点/V2ray节点/SSR节点节点推荐，VPN节点购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-27-clash-node-github.htm" title="免费节点机场 - 11月27日22.2M/S|免费V2ray节点/Shadowrocket节点/Clash节点/SSR节点/Singbox节点节点推荐，VPN节点购买推荐">免费节点机场 - 11月27日22.2M/S|免费V2ray节点/Shadowrocket节点/Clash节点/SSR节点/Singbox节点节点推荐，VPN节点购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-28-clash-stash-node.htm" title="免费节点机场 - 11月28日18.6M/S|免费SSR节点/Clash节点/V2ray节点/Singbox节点/Shadowrocket节点节点推荐，VPN节点购买推荐">免费节点机场 - 11月28日18.6M/S|免费SSR节点/Clash节点/V2ray节点/Singbox节点/Shadowrocket节点节点推荐，VPN节点购买推荐</a></li>
                         <li class="py-2"><a href="/free-nodes/2025-11-15-clash-v2ray-ss-ssr.htm" title="免费节点机场 - 11月15日18.1M/S|免费SSR节点/Clash节点/V2ray节点/Singbox节点/Shadowrocket节点节点推荐，VPN节点购买推荐">免费节点机场 - 11月15日18.1M/S|免费SSR节点/Clash节点/V2ray节点/Singbox节点/Shadowrocket节点节点推荐，VPN节点购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-11-clash-verge-rev-node-share.htm" title="免费节点机场 - 11月11日21.4M/S|免费Clash节点/Shadowrocket节点/V2ray节点/Singbox节点/SSR节点节点推荐，VPN节点购买推荐">免费节点机场 - 11月11日21.4M/S|免费Clash节点/Shadowrocket节点/V2ray节点/Singbox节点/SSR节点节点推荐，VPN节点购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-12-14-clash-node.htm" title="免费节点机场 - 12月14日21M/S|免费Clash节点/Singbox节点/SSR节点/Shadowrocket节点/V2ray节点节点推荐，VPN节点购买推荐">免费节点机场 - 12月14日21M/S|免费Clash节点/Singbox节点/SSR节点/Shadowrocket节点/V2ray节点节点推荐，VPN节点购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-8-free-node-subscribe.htm" title="免费节点机场 - 11月8日19M/S|免费SSR节点/Shadowrocket节点/V2ray节点/Clash节点/Singbox节点节点推荐，VPN节点购买推荐">免费节点机场 - 11月8日19M/S|免费SSR节点/Shadowrocket节点/V2ray节点/Clash节点/Singbox节点节点推荐，VPN节点购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-12-10-clash-v2ray-ss-ssr.htm" title="免费节点机场 - 12月10日22M/S|免费SSR节点/Clash节点/Shadowrocket节点/Singbox节点/V2ray节点节点推荐，VPN节点购买推荐">免费节点机场 - 12月10日22M/S|免费SSR节点/Clash节点/Shadowrocket节点/Singbox节点/V2ray节点节点推荐，VPN节点购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-20-clash-node-daily-updates.htm" title="免费节点机场 - 11月20日18.8M/S|免费Shadowrocket节点/V2ray节点/Clash节点/Singbox节点/SSR节点节点推荐，VPN节点购买推荐">免费节点机场 - 11月20日18.8M/S|免费Shadowrocket节点/V2ray节点/Clash节点/Singbox节点/SSR节点节点推荐，VPN节点购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-19-clash-stash.htm" title="免费节点机场 - 11月19日18.1M/S|免费Clash节点/V2ray节点/SSR节点/Singbox节点/Shadowrocket节点节点推荐，VPN节点购买推荐">免费节点机场 - 11月19日18.1M/S|免费Clash节点/V2ray节点/SSR节点/Singbox节点/Shadowrocket节点节点推荐，VPN节点购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-28-clash-stash-node.htm" title="免费节点机场 - 11月28日18.6M/S|免费SSR节点/Clash节点/V2ray节点/Singbox节点/Shadowrocket节点节点推荐，VPN节点购买推荐">免费节点机场 - 11月28日18.6M/S|免费SSR节点/Clash节点/V2ray节点/Singbox节点/Shadowrocket节点节点推荐，VPN节点购买推荐</a></li>
                     </ul>
     </div>
 </div>
@@ -479,7 +480,7 @@ sudo apt install shadowsocks-libev
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">8</span> <a href="/date/2025-12/" title="2025-12 归档">2025-12</a></h4>
+                <h4><span class="badge" style="float: right;">15</span> <a href="/date/2025-12/" title="2025-12 归档">2025-12</a></h4>
             </li>
                         <li class="py-2">
                 <h4><span class="badge" style="float: right;">23</span> <a href="/date/2025-11/" title="2025-11 归档">2025-11</a></h4>
