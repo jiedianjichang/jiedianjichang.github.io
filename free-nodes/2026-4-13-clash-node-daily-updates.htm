@@ -171,14 +171,9 @@ adb shell dumpsys batterystats <span class="token operator">&gt;</span> clash_ba
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>VMess MUX 功能如何改善短连接延迟？</h5></div>
+    <div class="panel-heading"><h5>Clash 如何通过策略组实现多节点负载均衡？</h5></div>
     <div class="panel-body">
-        VMess MUX 多路复用可以将多个短连接共享同一 TCP 或 QUIC 隧道，减少重复握手和连接延迟，特别适合游戏、即时通讯或频繁请求的场景，有效提升响应速度。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>VLESS + XTLS 的传输效率比 Trojan 高吗？</h5></div>
-    <div class="panel-body">
-        在高延迟环境下，VLESS + XTLS 的性能通常比 Trojan 高。XTLS 去掉了冗余加密开销，降低 CPU 占用，提高多连接场景下的吞吐率，尤其在服务器高负载情况下表现更佳。<hr />    </div>
+        Clash 支持策略组功能，可以根据节点延迟、地区或用途自动选择最佳节点处理流量，实现多节点负载均衡。有效提高访问速度和稳定性，保证网页浏览、视频播放和游戏流畅。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>WinXray 的多策略组如何优化流量分配？</h5></div>
@@ -191,24 +186,14 @@ adb shell dumpsys batterystats <span class="token operator">&gt;</span> clash_ba
         Rule Provider 是 Clash 的规则订阅机制，它可以通过远程 URL 自动更新分流规则文件。这样用户无需手动修改本地配置，就能保持规则同步更新，例如广告过滤或流媒体分流。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Clash 如何通过策略组实现多节点负载均衡？</h5></div>
+    <div class="panel-heading"><h5>VMess MUX 功能如何改善短连接延迟？</h5></div>
     <div class="panel-body">
-        Clash 支持策略组功能，可以根据节点延迟、地区或用途自动选择最佳节点处理流量，实现多节点负载均衡。有效提高访问速度和稳定性，保证网页浏览、视频播放和游戏流畅。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Surfboard 如何实现按应用分流？</h5></div>
-    <div class="panel-body">
-        Surfboard 支持通过策略组和规则文件按应用分流，将不同应用的流量分配到不同节点。这样可保证游戏或视频走低延迟节点，提高访问速度并优化网络体验。<hr />    </div>
+        VMess MUX 多路复用可以将多个短连接共享同一 TCP 或 QUIC 隧道，减少重复握手和连接延迟，特别适合游戏、即时通讯或频繁请求的场景，有效提升响应速度。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Trojan-Go 与 Trojan 有什么区别？</h5></div>
     <div class="panel-body">
         Trojan-Go 是 Trojan 的改进版，加入了多路复用、WebSocket 和 gRPC 支持。它兼容原版配置，同时在性能和连接灵活性上更优秀，适合多环境部署。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Mellow 与 Clash 的核心区别是什么？</h5></div>
-    <div class="panel-body">
-        Mellow 采用基于透明代理的架构，适合路由或系统级流量重定向，而 Clash 更偏向规则式应用代理。Mellow 的灵活性更高，但配置复杂；Clash 则兼顾易用性与功能扩展性。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Vmess 节点配置时常见错误有哪些？</h5></div>
@@ -218,7 +203,22 @@ adb shell dumpsys batterystats <span class="token operator">&gt;</span> clash_ba
 <div class="panel panel-default">
     <div class="panel-heading"><h5>PassWall2 自动切换节点机制如何工作？</h5></div>
     <div class="panel-body">
-        PassWall2 会根据节点延迟和丢包率测试结果，结合策略组自动选择最优节点处理流量。无需用户手动切换，保证网页、视频和游戏流量的速度和稳定性，优化网络体验。    </div>
+        PassWall2 会根据节点延迟和丢包率测试结果，结合策略组自动选择最优节点处理流量。无需用户手动切换，保证网页、视频和游戏流量的速度和稳定性，优化网络体验。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Surfboard 如何实现按应用分流？</h5></div>
+    <div class="panel-body">
+        Surfboard 支持通过策略组和规则文件按应用分流，将不同应用的流量分配到不同节点。这样可保证游戏或视频走低延迟节点，提高访问速度并优化网络体验。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>VLESS + XTLS 的传输效率比 Trojan 高吗？</h5></div>
+    <div class="panel-body">
+        在高延迟环境下，VLESS + XTLS 的性能通常比 Trojan 高。XTLS 去掉了冗余加密开销，降低 CPU 占用，提高多连接场景下的吞吐率，尤其在服务器高负载情况下表现更佳。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Mellow 与 Clash 的核心区别是什么？</h5></div>
+    <div class="panel-body">
+        Mellow 采用基于透明代理的架构，适合路由或系统级流量重定向，而 Clash 更偏向规则式应用代理。Mellow 的灵活性更高，但配置复杂；Clash 则兼顾易用性与功能扩展性。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -247,16 +247,16 @@ adb shell dumpsys batterystats <span class="token operator">&gt;</span> clash_ba
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2026-3-29-clash-meta-github.htm" title="免费节点机场 - 3月29日20.8M/S|免费V2ray节点/Shadowrocket节点/SSR节点/Clash节点/Singbox节点/Trojan节点节点推荐，VPN节点购买推荐">免费节点机场 - 3月29日20.8M/S|免费V2ray节点/Shadowrocket节点/SSR节点/Clash节点/Singbox节点/Trojan节点节点推荐，VPN节点购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-3-7-clash-node-github.htm" title="免费节点机场 - 3月7日21.3M/S|免费Clash节点/Shadowrocket节点/V2ray节点/Singbox节点/SSR节点/Trojan节点节点推荐，VPN节点购买推荐">免费节点机场 - 3月7日21.3M/S|免费Clash节点/Shadowrocket节点/V2ray节点/Singbox节点/SSR节点/Trojan节点节点推荐，VPN节点购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-4-18-clash-node.htm" title="免费节点机场 - 4月18日20.7M/S|免费SSR节点/Shadowrocket节点/Trojan节点/V2ray节点/Clash节点/Singbox节点节点推荐，VPN节点购买推荐">免费节点机场 - 4月18日20.7M/S|免费SSR节点/Shadowrocket节点/Trojan节点/V2ray节点/Clash节点/Singbox节点节点推荐，VPN节点购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-3-27-clash-node-github.htm" title="免费节点机场 - 3月27日19.6M/S|免费Shadowrocket节点/Clash节点/V2ray节点/SSR节点/Trojan节点/Singbox节点节点推荐，VPN节点购买推荐">免费节点机场 - 3月27日19.6M/S|免费Shadowrocket节点/Clash节点/V2ray节点/SSR节点/Trojan节点/Singbox节点节点推荐，VPN节点购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-3-4-clash-node-github.htm" title="免费节点机场 - 3月4日22M/S|免费Shadowrocket节点/Singbox节点/Trojan节点/V2ray节点/Clash节点/SSR节点节点推荐，VPN节点购买推荐">免费节点机场 - 3月4日22M/S|免费Shadowrocket节点/Singbox节点/Trojan节点/V2ray节点/Clash节点/SSR节点节点推荐，VPN节点购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-3-15-clash-node-daily-updates.htm" title="免费节点机场 - 3月15日19.7M/S|免费Singbox节点/Shadowrocket节点/Clash节点/V2ray节点/Trojan节点/SSR节点节点推荐，VPN节点购买推荐">免费节点机场 - 3月15日19.7M/S|免费Singbox节点/Shadowrocket节点/Clash节点/V2ray节点/Trojan节点/SSR节点节点推荐，VPN节点购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-3-18-clash-verge-rev-node.htm" title="免费节点机场 - 3月18日18.1M/S|免费Singbox节点/SSR节点/Trojan节点/V2ray节点/Clash节点/Shadowrocket节点节点推荐，VPN节点购买推荐">免费节点机场 - 3月18日18.1M/S|免费Singbox节点/SSR节点/Trojan节点/V2ray节点/Clash节点/Shadowrocket节点节点推荐，VPN节点购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-4-15-clash-node-daily-updates.htm" title="免费节点机场 - 4月15日19.8M/S|免费V2ray节点/SSR节点/Trojan节点/Singbox节点/Shadowrocket节点/Clash节点节点推荐，VPN节点购买推荐">免费节点机场 - 4月15日19.8M/S|免费V2ray节点/SSR节点/Trojan节点/Singbox节点/Shadowrocket节点/Clash节点节点推荐，VPN节点购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-3-5-clash-stash-node.htm" title="免费节点机场 - 3月5日20.6M/S|免费Shadowrocket节点/Clash节点/SSR节点/V2ray节点/Singbox节点/Trojan节点节点推荐，VPN节点购买推荐">免费节点机场 - 3月5日20.6M/S|免费Shadowrocket节点/Clash节点/SSR节点/V2ray节点/Singbox节点/Trojan节点节点推荐，VPN节点购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-3-25-clash-verge-rev-github.htm" title="免费节点机场 - 3月25日21.2M/S|免费SSR节点/Singbox节点/Trojan节点/Clash节点/V2ray节点/Shadowrocket节点节点推荐，VPN节点购买推荐">免费节点机场 - 3月25日21.2M/S|免费SSR节点/Singbox节点/Trojan节点/Clash节点/V2ray节点/Shadowrocket节点节点推荐，VPN节点购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-5-1-free-node-subscribe.htm" title="免费节点机场 - 5月1日20.7M/S|免费Singbox节点/SSR节点/Clash节点/Trojan节点/Shadowrocket节点/V2ray节点节点推荐，VPN节点购买推荐">免费节点机场 - 5月1日20.7M/S|免费Singbox节点/SSR节点/Clash节点/Trojan节点/Shadowrocket节点/V2ray节点节点推荐，VPN节点购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-5-7-clash-stash-node.htm" title="免费节点机场 - 5月7日19.5M/S|免费SSR节点/Trojan节点/Shadowrocket节点/Singbox节点/Clash节点/V2ray节点节点推荐，VPN节点购买推荐">免费节点机场 - 5月7日19.5M/S|免费SSR节点/Trojan节点/Shadowrocket节点/Singbox节点/Clash节点/V2ray节点节点推荐，VPN节点购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-4-19-clash-verge-rev-windows.htm" title="免费节点机场 - 4月19日20.6M/S|免费Shadowrocket节点/V2ray节点/Clash节点/Trojan节点/Singbox节点/SSR节点节点推荐，VPN节点购买推荐">免费节点机场 - 4月19日20.6M/S|免费Shadowrocket节点/V2ray节点/Clash节点/Trojan节点/Singbox节点/SSR节点节点推荐，VPN节点购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-5-4-clash-verge-rev-github.htm" title="免费节点机场 - 5月4日21.4M/S|免费Trojan节点/Shadowrocket节点/SSR节点/V2ray节点/Clash节点/Singbox节点节点推荐，VPN节点购买推荐">免费节点机场 - 5月4日21.4M/S|免费Trojan节点/Shadowrocket节点/SSR节点/V2ray节点/Clash节点/Singbox节点节点推荐，VPN节点购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-4-29-free-node-subscribe.htm" title="免费节点机场 - 4月29日21.3M/S|免费Trojan节点/V2ray节点/SSR节点/Shadowrocket节点/Singbox节点/Clash节点节点推荐，VPN节点购买推荐">免费节点机场 - 4月29日21.3M/S|免费Trojan节点/V2ray节点/SSR节点/Shadowrocket节点/Singbox节点/Clash节点节点推荐，VPN节点购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-5-2-node-share.htm" title="免费节点机场 - 5月2日22.3M/S|免费Shadowrocket节点/Clash节点/V2ray节点/Trojan节点/Singbox节点/SSR节点节点推荐，VPN节点购买推荐">免费节点机场 - 5月2日22.3M/S|免费Shadowrocket节点/Clash节点/V2ray节点/Trojan节点/Singbox节点/SSR节点节点推荐，VPN节点购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-4-17-clash-stash.htm" title="免费节点机场 - 4月17日21.3M/S|免费V2ray节点/SSR节点/Singbox节点/Trojan节点/Clash节点/Shadowrocket节点节点推荐，VPN节点购买推荐">免费节点机场 - 4月17日21.3M/S|免费V2ray节点/SSR节点/Singbox节点/Trojan节点/Clash节点/Shadowrocket节点节点推荐，VPN节点购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-4-26-clash-stash.htm" title="免费节点机场 - 4月26日21.1M/S|免费Singbox节点/Clash节点/Trojan节点/V2ray节点/SSR节点/Shadowrocket节点节点推荐，VPN节点购买推荐">免费节点机场 - 4月26日21.1M/S|免费Singbox节点/Clash节点/Trojan节点/V2ray节点/SSR节点/Shadowrocket节点节点推荐，VPN节点购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-4-28-clash-node-daily-updates.htm" title="免费节点机场 - 4月28日21.9M/S|免费Trojan节点/SSR节点/Shadowrocket节点/Clash节点/V2ray节点/Singbox节点节点推荐，VPN节点购买推荐">免费节点机场 - 4月28日21.9M/S|免费Trojan节点/SSR节点/Shadowrocket节点/Clash节点/V2ray节点/Singbox节点节点推荐，VPN节点购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-5-3-clash-node.htm" title="免费节点机场 - 5月3日21M/S|免费V2ray节点/Shadowrocket节点/Trojan节点/Singbox节点/SSR节点/Clash节点节点推荐，VPN节点购买推荐">免费节点机场 - 5月3日21M/S|免费V2ray节点/Shadowrocket节点/Trojan节点/Singbox节点/SSR节点/Clash节点节点推荐，VPN节点购买推荐</a></li>
                     </ul>
     </div>
 </div>
@@ -268,10 +268,10 @@ adb shell dumpsys batterystats <span class="token operator">&gt;</span> clash_ba
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">11</span> <a href="/date/2026-04/" title="2026-04 归档">2026-04</a></h4>
+                <h4><span class="badge" style="float: right;">11</span> <a href="/date/2026-05/" title="2026-05 归档">2026-05</a></h4>
             </li>
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">26</span> <a href="/date/2026-03/" title="2026-03 归档">2026-03</a></h4>
+                <h4><span class="badge" style="float: right;">19</span> <a href="/date/2026-04/" title="2026-04 归档">2026-04</a></h4>
             </li>
                     </ul>
     </div>
