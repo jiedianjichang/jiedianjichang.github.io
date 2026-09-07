@@ -290,29 +290,14 @@ Clash爱人支持Windows、macOS和Linux，覆盖主流电脑操作系统，适�
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Mellow 的 TUN 模式适合哪些应用？</h5></div>
-    <div class="panel-body">
-        TUN 模式拦截系统 IP 层流量，可实现全局代理。适合游戏、视频、浏览器和其他全局应用，实现低延迟和稳定连接，保证所有流量通过代理节点，提高访问速度和稳定性。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Vmess 节点配置时常见错误有哪些？</h5></div>
-    <div class="panel-body">
-        常见错误包括端口号不匹配、UUID 错误、TLS 设置不正确或传输类型配置错误。这些都会导致连接失败。检查服务器配置与客户端参数一致性是解决问题的关键。<hr />    </div>
-</div>
-<div class="panel panel-default">
     <div class="panel-heading"><h5>Nekobox 导入 Clash 订阅后规则丢失，可能原因？</h5></div>
     <div class="panel-body">
         部分客户端在解析订阅时只保留节点信息而忽略 rules 或 proxies-group，建议使用支持完整解析的订阅转换器（如 sub-converter）先将订阅转换为兼容格式再导入，或手动合并规则文件。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Nekoray 如何导入 V2Ray 节点？</h5></div>
+    <div class="panel-heading"><h5>Potatso Lite 能否手动添加节点？</h5></div>
     <div class="panel-body">
-        打开 Nekoray 客户端后，点击“导入配置”，选择 V2Ray 或 Clash 类型的订阅链接。程序会自动解析节点列表，用户可一键连接或进行延迟测试。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Shadowrocket 的测速功能如何优化节点选择？</h5></div>
-    <div class="panel-body">
-        Shadowrocket 可测量节点延迟和丢包率，并根据结果排序策略组节点。延迟低的节点会优先使用，保证网页浏览、视频和游戏的速度和稳定性，提高整体网络体验。<hr />    </div>
+        Potatso Lite 支持手动添加 Shadowsocks 节点。用户在“配置”中选择添加节点，输入服务器、端口、加密方式等信息即可建立连接，适合手动管理单个线路。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Shadowrocket 节点延迟排序功能如何提升访问体验？</h5></div>
@@ -320,14 +305,19 @@ Clash爱人支持Windows、macOS和Linux，覆盖主流电脑操作系统，适�
         Shadowrocket 会测速节点延迟和丢包率，并优先使用低延迟节点。结合策略组和分流规则，可保证网页、视频和游戏流量通过最优节点，提高访问速度和稳定性。<hr />    </div>
 </div>
 <div class="panel panel-default">
+    <div class="panel-heading"><h5>Mellow 的 TUN 模式适合哪些应用？</h5></div>
+    <div class="panel-body">
+        TUN 模式拦截系统 IP 层流量，可实现全局代理。适合游戏、视频、浏览器和其他全局应用，实现低延迟和稳定连接，保证所有流量通过代理节点，提高访问速度和稳定性。<hr />    </div>
+</div>
+<div class="panel panel-default">
     <div class="panel-heading"><h5>PassWall2 是什么软件？</h5></div>
     <div class="panel-body">
         PassWall2 是一个运行在 OpenWRT 路由器上的插件，用于代理流量分流和节点管理。它支持多种协议，包括 V2Ray、Trojan、SSR 等。通过 Web 界面，用户可以灵活设置不同设备走不同代理，适合家庭或小型局域网使用。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Clash 如何实现智能分流？</h5></div>
+    <div class="panel-heading"><h5>Vmess 节点配置时常见错误有哪些？</h5></div>
     <div class="panel-body">
-        Clash 通过结合规则文件和策略组，可以对不同网站或应用进行智能分流。例如将国内流量直连，海外流量通过代理节点，提高访问速度和稳定性，同时减少不必要的节点占用。<hr />    </div>
+        常见错误包括端口号不匹配、UUID 错误、TLS 设置不正确或传输类型配置错误。这些都会导致连接失败。检查服务器配置与客户端参数一致性是解决问题的关键。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>PassWall2 如何实现智能分流？</h5></div>
@@ -335,9 +325,19 @@ Clash爱人支持Windows、macOS和Linux，覆盖主流电脑操作系统，适�
         PassWall2 通过自定义规则文件控制流量走向。可根据目标域名、国家或 IP 范围自动判断走代理或直连。用户还能加载社区规则，实现类似 Clash 的高效路由分流。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Potatso Lite 能否手动添加节点？</h5></div>
+    <div class="panel-heading"><h5>Shadowrocket 的测速功能如何优化节点选择？</h5></div>
     <div class="panel-body">
-        Potatso Lite 支持手动添加 Shadowsocks 节点。用户在“配置”中选择添加节点，输入服务器、端口、加密方式等信息即可建立连接，适合手动管理单个线路。    </div>
+        Shadowrocket 可测量节点延迟和丢包率，并根据结果排序策略组节点。延迟低的节点会优先使用，保证网页浏览、视频和游戏的速度和稳定性，提高整体网络体验。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Clash 如何实现智能分流？</h5></div>
+    <div class="panel-body">
+        Clash 通过结合规则文件和策略组，可以对不同网站或应用进行智能分流。例如将国内流量直连，海外流量通过代理节点，提高访问速度和稳定性，同时减少不必要的节点占用。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Nekoray 如何导入 V2Ray 节点？</h5></div>
+    <div class="panel-body">
+        打开 Nekoray 客户端后，点击“导入配置”，选择 V2Ray 或 Clash 类型的订阅链接。程序会自动解析节点列表，用户可一键连接或进行延迟测试。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -385,16 +385,16 @@ Clash爱人支持Windows、macOS和Linux，覆盖主流电脑操作系统，适�
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2026-8-2-clash-verge-rev-nodes.htm" title="免费节点机场 - 8月2日21.8M/S|免费Trojan节点/Singbox节点/Clash节点/SSR节点/V2ray节点/Shadowrocket节点节点推荐，VPN节点购买推荐">免费节点机场 - 8月2日21.8M/S|免费Trojan节点/Singbox节点/Clash节点/SSR节点/V2ray节点/Shadowrocket节点节点推荐，VPN节点购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-8-16-free-node-subscribe.htm" title="免费节点机场 - 8月16日22.4M/S|免费Singbox节点/Shadowrocket节点/V2ray节点/Clash节点/Trojan节点/SSR节点节点推荐，VPN节点购买推荐">免费节点机场 - 8月16日22.4M/S|免费Singbox节点/Shadowrocket节点/V2ray节点/Clash节点/Trojan节点/SSR节点节点推荐，VPN节点购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-7-21-clash-v2ray-ss-ssr.htm" title="免费节点机场 - 7月21日21.1M/S|免费Trojan节点/SSR节点/Clash节点/V2ray节点/Singbox节点/Shadowrocket节点节点推荐，VPN节点购买推荐">免费节点机场 - 7月21日21.1M/S|免费Trojan节点/SSR节点/Clash节点/V2ray节点/Singbox节点/Shadowrocket节点节点推荐，VPN节点购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-7-28-clash-stash-node.htm" title="免费节点机场 - 7月28日22.4M/S|免费Trojan节点/SSR节点/V2ray节点/Singbox节点/Shadowrocket节点/Clash节点节点推荐，VPN节点购买推荐">免费节点机场 - 7月28日22.4M/S|免费Trojan节点/SSR节点/V2ray节点/Singbox节点/Shadowrocket节点/Clash节点节点推荐，VPN节点购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-8-18-free-node-subscribe.htm" title="免费节点机场 - 8月18日21.2M/S|免费Clash节点/SSR节点/V2ray节点/Singbox节点/Shadowrocket节点/Trojan节点节点推荐，VPN节点购买推荐">免费节点机场 - 8月18日21.2M/S|免费Clash节点/SSR节点/V2ray节点/Singbox节点/Shadowrocket节点/Trojan节点节点推荐，VPN节点购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/clash-verge-rev-windows-2026-7-29.htm" title="免费节点机场 - 7月29日21.5M/S|免费Singbox节点/Shadowrocket节点/Clash节点/V2ray节点/SSR节点/Trojan节点节点推荐，VPN节点购买推荐">免费节点机场 - 7月29日21.5M/S|免费Singbox节点/Shadowrocket节点/Clash节点/V2ray节点/SSR节点/Trojan节点节点推荐，VPN节点购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-7-23-clash-verge-rev-github.htm" title="免费节点机场 - 7月23日22.6M/S|免费Trojan节点/SSR节点/Shadowrocket节点/Clash节点/V2ray节点/Singbox节点节点推荐，VPN节点购买推荐">免费节点机场 - 7月23日22.6M/S|免费Trojan节点/SSR节点/Shadowrocket节点/Clash节点/V2ray节点/Singbox节点节点推荐，VPN节点购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-7-19-clash-verge-rev-node.htm" title="免费节点机场 - 7月19日19.6M/S|免费V2ray节点/Trojan节点/SSR节点/Singbox节点/Shadowrocket节点/Clash节点节点推荐，VPN节点购买推荐">免费节点机场 - 7月19日19.6M/S|免费V2ray节点/Trojan节点/SSR节点/Singbox节点/Shadowrocket节点/Clash节点节点推荐，VPN节点购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-7-24-clash-verge-rev-node-share.htm" title="免费节点机场 - 7月24日22.4M/S|免费Shadowrocket节点/Singbox节点/V2ray节点/SSR节点/Trojan节点/Clash节点节点推荐，VPN节点购买推荐">免费节点机场 - 7月24日22.4M/S|免费Shadowrocket节点/Singbox节点/V2ray节点/SSR节点/Trojan节点/Clash节点节点推荐，VPN节点购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-7-22-clash-verge-rev-nodes.htm" title="免费节点机场 - 7月22日19.9M/S|免费V2ray节点/SSR节点/Trojan节点/Clash节点/Singbox节点/Shadowrocket节点节点推荐，VPN节点购买推荐">免费节点机场 - 7月22日19.9M/S|免费V2ray节点/SSR节点/Trojan节点/Clash节点/Singbox节点/Shadowrocket节点节点推荐，VPN节点购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-8-10-clash-node-daily-updates.htm" title="免费节点机场 - 8月10日23M/S|免费Singbox节点/SSR节点/Clash节点/Shadowrocket节点/Trojan节点/V2ray节点节点推荐，VPN节点购买推荐">免费节点机场 - 8月10日23M/S|免费Singbox节点/SSR节点/Clash节点/Shadowrocket节点/Trojan节点/V2ray节点节点推荐，VPN节点购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/clash-v2ray-ss-ssr-2026-8-23.htm" title="免费节点机场 - 8月23日23M/S|免费Trojan节点/V2ray节点/Shadowrocket节点/Singbox节点/SSR节点/Clash节点节点推荐，VPN节点购买推荐">免费节点机场 - 8月23日23M/S|免费Trojan节点/V2ray节点/Shadowrocket节点/Singbox节点/SSR节点/Clash节点节点推荐，VPN节点购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/clash-verge-rev-windows-2026-8-9.htm" title="免费节点机场 - 8月9日21M/S|免费Shadowrocket节点/SSR节点/Singbox节点/Clash节点/Trojan节点/V2ray节点节点推荐，VPN节点购买推荐">免费节点机场 - 8月9日21M/S|免费Shadowrocket节点/SSR节点/Singbox节点/Clash节点/Trojan节点/V2ray节点节点推荐，VPN节点购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-8-30-clash-meta-github.htm" title="免费节点机场 - 8月30日20.4M/S|免费Trojan节点/V2ray节点/SSR节点/Clash节点/Singbox节点/Shadowrocket节点节点推荐，VPN节点购买推荐">免费节点机场 - 8月30日20.4M/S|免费Trojan节点/V2ray节点/SSR节点/Clash节点/Singbox节点/Shadowrocket节点节点推荐，VPN节点购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-9-2-clash-stash-node.htm" title="免费节点机场 - 9月2日22.4M/S|免费V2ray节点/Shadowrocket节点/SSR节点/Singbox节点/Trojan节点/Clash节点节点推荐，VPN节点购买推荐">免费节点机场 - 9月2日22.4M/S|免费V2ray节点/Shadowrocket节点/SSR节点/Singbox节点/Trojan节点/Clash节点节点推荐，VPN节点购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-8-8-clash-node-daily-updates.htm" title="免费节点机场 - 8月8日20.7M/S|免费Singbox节点/Clash节点/V2ray节点/SSR节点/Trojan节点/Shadowrocket节点节点推荐，VPN节点购买推荐">免费节点机场 - 8月8日20.7M/S|免费Singbox节点/Clash节点/V2ray节点/SSR节点/Trojan节点/Shadowrocket节点节点推荐，VPN节点购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-8-24-clash-meta-github.htm" title="免费节点机场 - 8月24日20.7M/S|免费Trojan节点/V2ray节点/Clash节点/Shadowrocket节点/Singbox节点/SSR节点节点推荐，VPN节点购买推荐">免费节点机场 - 8月24日20.7M/S|免费Trojan节点/V2ray节点/Clash节点/Shadowrocket节点/Singbox节点/SSR节点节点推荐，VPN节点购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/clash-stash-2026-8-25.htm" title="免费节点机场 - 8月25日20.1M/S|免费SSR节点/V2ray节点/Shadowrocket节点/Singbox节点/Clash节点/Trojan节点节点推荐，VPN节点购买推荐">免费节点机场 - 8月25日20.1M/S|免费SSR节点/V2ray节点/Shadowrocket节点/Singbox节点/Clash节点/Trojan节点节点推荐，VPN节点购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/clash-stash-2026-9-1.htm" title="免费节点机场 - 9月1日23M/S|免费V2ray节点/SSR节点/Clash节点/Trojan节点/Shadowrocket节点/Singbox节点节点推荐，VPN节点购买推荐">免费节点机场 - 9月1日23M/S|免费V2ray节点/SSR节点/Clash节点/Trojan节点/Shadowrocket节点/Singbox节点节点推荐，VPN节点购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-8-12-free-node-subscribe.htm" title="免费节点机场 - 8月12日20M/S|免费V2ray节点/Trojan节点/Shadowrocket节点/Singbox节点/Clash节点/SSR节点节点推荐，VPN节点购买推荐">免费节点机场 - 8月12日20M/S|免费V2ray节点/Trojan节点/Shadowrocket节点/Singbox节点/Clash节点/SSR节点节点推荐，VPN节点购买推荐</a><hr /></li>
                     </ul>
     </div>
 </div>
@@ -406,10 +406,10 @@ Clash爱人支持Windows、macOS和Linux，覆盖主流电脑操作系统，适�
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">24</span> <a href="/date/2026-08/" title="2026-08 归档">2026-08</a></h4>
+                <h4><span class="badge" style="float: right;">4</span> <a href="/date/2026-09/" title="2026-09 归档">2026-09</a></h4>
             </li>
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">13</span> <a href="/date/2026-07/" title="2026-07 归档">2026-07</a></h4>
+                <h4><span class="badge" style="float: right;">26</span> <a href="/date/2026-08/" title="2026-08 归档">2026-08</a></h4>
             </li>
                     </ul>
     </div>
